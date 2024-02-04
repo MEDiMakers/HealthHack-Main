@@ -6,7 +6,7 @@ who wish to equire on medical situations such as treatment plans, medicinal requ
 
 ## Main files
 
-```script.js```:
+```script.js```
 - sendMessage delivers the response generated from the medicine-chat Large Language Model (LLM) to the user
 - sendText, sendAudio, sendImage: frontend to receive user inputs for the different input types - Text, Audio and Image inputs respectively
 - textResponse: part of the sendMessage function that visualises the generated response from the LLM on the user's screen 
@@ -28,7 +28,9 @@ who wish to equire on medical situations such as treatment plans, medicinal requ
 
 
 ```chat_app.db```
+
 Tables:
+
 - ChatSessions :
 	ChatSessionID (int): ID of chat session
 	ChatTitle (str): Name of the particular chat; can be renamed
@@ -46,7 +48,8 @@ Tables:
 	CreatedAt (datetime): Timestamp of when user created his account/profile
 
 
-```database.py```:
+```database.py```
+
 - init_db(): Initializes the database with tables and a default user.
 - reset_db():Resets the database (clears it) by removing all tables and re-initializing.
 - start_new_chat(user_id): Starts a new chat session for a given user.
