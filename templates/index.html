@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDiC Chatbot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="static/icons/logo.svg" alt="Logo" class="logo"> 
+            <span class="brand-name">MEDiC Chat</span>
+        </div>
+        <div class="mode-toggle" id="mode-toggle">
+            <img src="static/icons/light_mode.svg" alt="Light Mode" id="light-icon" class="theme-icon light-icon">
+            <img src="static/icons/dark_mode.svg" alt="Dark Mode" id="dark-icon" class="theme-icon dark-icon" style="display: none;">
+        </div>
+        
+    </nav>
+
+
+    <div class="app-container">
+        <!-- Side bar -->
+        <div class="sidebar">
+            <button id="start-chat-button" class="sidebar-button"> Start New Chat </button>
+            <button id="reset-history" class="sidebar-button">Reset History</button>
+            <ul id="chat-list">
+                <!-- Chat sessions will be loaded here -->
+            </ul>
+        </div>
+        <div class="main-container">
+        <!-- Chat box -->
+            <h1>Start Chatting</h1>
+            <div class="chat-container">
+                <div class="chat-box" id="chat-box">
+                    <!-- Chat messages will be dynamically added here -->
+                </div>
+                <div class="input-area">
+                    <input type="file" id="file-input" accept=".wav,.jpg" hidden />
+                    <button class="icon-button file-upload" onclick="document.getElementById('file-input').click();">
+                        <img src="static/icons/paper_clip.svg" alt="Upload" /> 
+                    </button>
+                    <div class="text-box">
+                        <input type="text" id="text-input" placeholder="Type your message...">
+                    </div>
+                    <button class="icon-button send-message" onclick="sendText()">
+                        <img src="static/icons/send.svg" alt="Send" /> 
+                    </button>
+                    <button class="icon-button audio-input">
+                        <img src="static/icons/microphone.svg" alt="Audio" /> 
+                    </button>
+                    <!-- TODO: handle audio and file input -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="static/script.js"></script>
+    <script src="static/sidebar.js"></script>
+</body>
+</html>
+
+
